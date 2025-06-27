@@ -1,26 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
-    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workintech + 🍕</title>
+    <title>Teknolojik Yemekler</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
-
   <body>
-    <div id="app">
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
-      </div>
-    </div>
-  </body>
+    <!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <img class="hero-logo" src="./public/assets/iteration-1/logo.svg" alt="Logo" width="200" />
+    <p class="slogan">fırsatı kaçırma</p>
+    <h2>KOD ACIKTIRIR<br />PIZZA, DOYURUR</h2>
+    <button class="btn">ACIKTIM</button>
+  </div>
+  <img class="hero-bg" src="./public/assets/iteration-1/home-banner.png" alt="Pizza görseli" />
+</header>
+    <!-- KATEGORİLER -->
+    <nav class="category-nav">
+      <ul>
+        <li><img src="./public/assets/iteration-2/icons/1.svg" width="30" /> YENİ! Kore</li>
+        <li><img src="./public/assets/iteration-2/icons/2.svg" width="30" /> Pizza</li>
+        <li><img src="./public/assets/iteration-2/icons/3.svg" width="30" /> Burger</li>
+        <li><img src="./public/assets/iteration-2/icons/4.svg" width="30" /> Kızartmalar</li>
+        <li><img src="./public/assets/iteration-2/icons/5.svg" width="30" /> Fast Food</li>
+        <li><img src="./public/assets/iteration-2/icons/6.svg" width="30" /> Gazlı İçecek</li>
+      </ul>
+    </nav>
 
+
+<section class="special-offers">
+  <div class="offer offer-feature red">
+    <div class="offer-text">
+      <h3><br>Özel</br> Lezzetus</h3>
+      <p>Position: Absolute Acı Burger</p>
+      <button>SİPARİŞ VER</button>
+    </div>
+    <img src="./public/assets/iteration-2/cta/kart-1.png" alt="Pizza" class="bg-pizza" />
+  </div>
+
+  <div class="offer dark">
+    <div class="offer-text">
+      <h3>Hackathlon Burger Menü</h3>
+      <button>SİPARİŞ VER</button>
+    </div>
+    <img src="./public/assets/iteration-2/cta/kart-2.png" alt="Burger" />
+  </div>
+
+  <div class="offer light">
+    <div class="offer-text">
+      <h3><span class="red-text">Çooook</span> hızlı<br />npm gibi kurye</h3>
+      <button>SİPARİŞ VER</button>
+    </div>
+    <img src="./public/assets/iteration-2/cta/kart-3.png" alt="Kurye" />
+  </div>
+</section>
+
+
+
+
+    <!-- POPÜLER MENÜLER -->
+    <section class="popular">
+      <h3>En çok paketlenen menüler</h3>
+      <p>Acıktıran Kodlara Doyuran Lezzetler</p>
+
+      <div class="menu-tags">
+        <span><img src="./public/assets/iteration-2/icons/1.svg" width="30" /> Ramen</span>
+        <span class="active"><img src="./public/assets/iteration-2/icons/2.svg" width="30" />Pizza</span>
+        <span><img src="./public/assets/iteration-2/icons/3.svg" width="30" />Burger</span>
+        <span><img src="./public/assets/iteration-2/icons/4.svg" width="30" />French fries</span>
+        <span><img src="./public/assets/iteration-2/icons/5.svg" width="30" />Fast food</span>
+        <span><img src="./public/assets/iteration-2/icons/6.svg" width="30" />Soft drinks</span>
+      </div>
+
+      <div class="menu-items">
+        <div class="menu-card">
+          <img src="./public/assets/iteration-2/pictures/food-1.png" alt="" />
+          <h4>Terminal Pizza</h4>
+          <p>4.9 ⭐ (200)</p>
+          <strong>60₺</strong>
+        </div>
+        <div class="menu-card">
+          <img src="./public/assets/iteration-2/pictures/food-2.png" alt="" />
+          <h4>Position Absolute Ac Pizza</h4>
+          <p>4.9 ⭐ (200)</p>
+          <strong>60₺</strong>
+        </div>
+        <div class="menu-card">
+          <img src="./public/assets/iteration-2/pictures/food-3.png" alt="" />
+          <h4>useEffect Tavuklu Burger</h4>
+          <p>4.9 ⭐ (200)</p>
+          <strong>60₺</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div>
+          <img src="./public/assets/iteration-2/footer/logo-footer.svg" alt="Logo" width="150" />
+          <p> <img src="./public/assets/iteration-2/footer/icons/icon-1.png" /> 341 Londonderry Road, İstanbul Türkiye</p>
+          <p> <img src="./public/assets/iteration-2/footer/icons/icon-2.png"/> <a href="mailto:aciktim@teknolojikyemekler.com">aciktim@teknolojikyemekler.com</a></p>
+          <p> <img src="./public/assets/iteration-2/footer/icons/icon-3.png"/> 216 123 45 67</p>
+        </div>
+        <div>
+          <h4>Hot Menu</h4>
+          <ul>
+            <li>Terminal Pizza</li>
+            <li>5 Kişilik Hackathlon Pizza</li>
+            <li>useEffect Tavuklu Pizza</li>
+            <li>Beyaz Console Fırını</li>
+            <li>Testler Geçti Mutlu Burger</li>
+            <li>Position Absolute Ac Burger</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Instagram</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+            <img src="./public/assets/iteration-2/footer/insta/li-0.png" width="60" />
+            <img src="./public/assets/iteration-2/footer/insta/li-1.png" width="60" />
+            <img src="./public/assets/iteration-2/footer/insta/li-2.png" width="60" />
+            <img src="./public/assets/iteration-2/footer/insta/li-3.png" width="60" />
+            <img src="./public/assets/iteration-2/footer/insta/li-4.png" width="60" />
+            <img src="./public/assets/iteration-2/footer/insta/li-5.png" width="60" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Teknolojik Yemekler.</div>
+    </footer>
+  </body>
 </html>
