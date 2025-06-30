@@ -14,8 +14,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* style.css */
-
+/* Base */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -55,20 +54,15 @@ img {
 }
 
 .hero .slogan {
-  font-size: 18px;
-  color: #FDC913;
-  margin: 10px 0;
-  font-family: Satisfy, cursive;
-}
-.hero .slogan {
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Satisfy', cursive;
   color: #ffd166;
-  margin-bottom: 8px; 
+  margin-bottom: 4px;
 }
+
 .hero h2 {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 100;
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -79,19 +73,19 @@ img {
   background: #FDC913;
   border: none;
   padding: 12px 30px;
-  font-weight: bold;
-  font-size: 16px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 520;
+  font-size: 18px;
   color: #000;
   cursor: pointer;
   border-radius: 30px;
   margin-top: 20px;
 }
+
 .hero-logo {
   display: block;
   margin: 0 auto;
 }
-
-
 
 /* NAVIGATION */
 .category-nav {
@@ -114,7 +108,8 @@ img {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 500;
+  font-family: 'Barlow', serif;
+  font-weight: 600;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 20px;
@@ -126,69 +121,157 @@ img {
 }
 
 /* SPECIAL OFFERS */
-
 .special-offers {
-  max-width: 820px;
   display: flex;
-  gap: 12px 16px;
+  gap: 16px;
+  max-width: 800px;
   padding: 24px 16px;
   margin: auto;
-  box-sizing: border-box;
 }
 
-/* Büyük sol kart (kare) */
 .offer.red {
-  border-radius: 12px;
-  padding: 24px;
-  display: flex;
-  width: 810px;
-  justify-content: center;
-  align-items: flex-start;
   background-color: #ce2829;
   color: white;
-  position: relative;
-  overflow: hidden;
-  height: 266px;
-}
-
-/* Sağdaki kartlar (yarım yükseklikte) */
-.offer.dark,
-.offer.light {
   border-radius: 12px;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
   position: relative;
+  width: 50%;
+  height: 325px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   overflow: hidden;
-  width: 359px;
-  height: 101px;
 }
+.offer.red .offer-text {
+  font-family: 'Barlow', serif;
+  z-index: 2;
+  position: relative;
+  margin-top: 0; 
+  flex: 1;
+}
+.offer.red .offer-text h3 {
+  font-family: 'Quattrocento', sans-serif;
+  font-size: 40px;
+  font-weight: bold; 
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+
+.offer.red img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .right-offers {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  width: 50%;
+  gap: 8px;
 }
 
+.offer.dark,
+.offer.light {
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  height: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: 'Barlow', serif;
+}
 
-/* Arka plan renkleri */
+.offer.dark img,
+.offer.light img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
 .offer.dark {
   background-color: #292929;
   color: white;
 }
 
 .offer.light {
+  position: relative;
+  border-radius: 12px;
   background-color: #f5f1e8;
   color: #000;
+  padding: 24px;
+  height: 133px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-/* Metin stilleri */
-.offer-text {
-  z-index: 2;
+.offer.light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  background-image: url('./public/assets/iteration-2/cta/kart-3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+  opacity: 1;
+}
+.offer.light .offer-text {
   position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.offer.light img {
+  height: 100%;
+  width: auto;
+  max-width: 50%;
+  object-fit: contain;
+}
+
+.offer.dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  background-image: url('./public/assets/iteration-2/cta/kart-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  z-index: 1;
+  opacity: 1;
+}
+.offer.dark .offer-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.offer.dark img {
+  height: 100%;
+  width: auto;
+  max-width: 50%;
+  object-fit: contain;
+}
+
+
+.offer-text {
+  position: relative;
+  z-index: 2;
 }
 
 .offer-text h3 {
@@ -219,33 +302,34 @@ img {
   color: black;
 }
 
-/* Görseller */
 .offer img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  border-radius: 3%;
+  width: 100%;
   height: auto;
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  z-index: 1;
-  pointer-events: none;
+  object-fit: cover;
 }
 
 .offer.light .red-text {
   color: #ce2829;
 }
 
-
 /* POPULAR MENU */
 .popular {
   text-align: center;
-  padding: 60px 20px;
+  padding: 0 20px 60px 20px;
 }
 
 .popular h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: 'Satisfy', cursive;
+  color: #ce2829;
+  margin-bottom: 3px;
+}
+.popular p{
+  margin-top: 0;
+  font-size: 36px;
+  font-family: 'Barlow', serif;
+  font-weight: bold;
 }
 
 .menu-tags {
@@ -259,13 +343,14 @@ img {
 .menu-tags span {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* resim ile yazı arasında boşluk */
+  gap: 8px;
   padding: 8px 14px;
   border-radius: 20px;
   background: #f2f2f2;
   cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s, ;
+  font-family: 'Barlow', serif;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
 .menu-tags span.active,
@@ -318,19 +403,23 @@ footer {
   background: #212529;
   color: white;
   padding: 40px 20px;
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 960px; 
+  margin: 0 auto;   
+  text-align: left;  
 }
 
 .footer-content div {
-  flex: 1;
+  flex: 1 1 220px;
   min-width: 200px;
 }
 
@@ -360,6 +449,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-family: 'Barlow',sans-serif;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -369,11 +460,13 @@ footer {
   height: 18px;
   object-fit: contain;
 }
+
 .footer-content .instagram-grid {
   display: grid;
   grid-template-columns: repeat(3, 60px);
   gap: 5px;
 }
+
 .instagram-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -387,8 +480,7 @@ footer {
   border-radius: 6px;
 }
 
-
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-items,
   .special-offers,
@@ -406,3 +498,4 @@ footer {
     width: 90%;
   }
 }
+
