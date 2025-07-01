@@ -14,11 +14,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* Base */
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: #fff;
+  background: #FAF7F2;
   color: #333;
 }
 
@@ -27,7 +27,7 @@ img {
   display: block;
 }
 
-/* HERO SECTION */
+
 .hero {
   position: relative;
   height: 731px;
@@ -87,9 +87,8 @@ img {
   margin: 0 auto;
 }
 
-/* NAVIGATION */
+
 .category-nav {
-  background: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
@@ -120,7 +119,7 @@ img {
   background: #f4f4f4;
 }
 
-/* SPECIAL OFFERS */
+
 .special-offers {
   display: flex;
   gap: 16px;
@@ -170,7 +169,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   gap: 8px;
 }
 
@@ -313,7 +312,7 @@ img {
   color: #ce2829;
 }
 
-/* POPULAR MENU */
+
 .popular {
   text-align: center;
   padding: 0 20px 60px 20px;
@@ -346,7 +345,7 @@ img {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 20px;
-  background: #f2f2f2;
+  background: #FFFFFF;
   cursor: pointer;
   font-family: 'Barlow', serif;
   font-weight: 600;
@@ -398,7 +397,7 @@ img {
   color: #000;
 }
 
-/* FOOTER */
+
 footer {
   background: #212529;
   color: white;
@@ -480,22 +479,190 @@ footer {
   border-radius: 6px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
-  .menu-items,
-  .special-offers,
-  .footer-content {
+  body{
+    background-color: #FAF7F2;
+  }
+  .hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; 
+    z-index: 1;
+  }
+
+  .hero-content {
+    z-index: 2;
+    padding: 60px 20px 0;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero .btn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+
+.category-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 8px;
+    padding: 0 20px;
+    justify-content: center; 
     align-items: center;
   }
 
-  .category-nav ul {
+  .category-nav li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    gap: 8px;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 20px;
+    width: 140px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+  }
+
+  .category-nav li img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+
+  .category-nav li:nth-child(1),
+  .category-nav li:nth-child(3),
+  .category-nav li:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .category-nav li:nth-child(2),
+  .category-nav li:nth-child(4),
+  .category-nav li:nth-child(6) {
+    grid-column: 2;
+  }
+
+  .special-offers {
     flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .offer.red{
+    width: auto;
+  }
+
+  .offer.dark,
+  .offer.light {
+    width: 150%;
+    height: auto;
+  }
+
+
+  .popular h3 {
+    font-size: 24px;
+  }
+
+  .popular p {
+    font-size: 24px;
+  }
+
+
+  .menu-tags {
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+    column-gap: 8px;
+    row-gap: 12px;  
+    justify-content: center; 
+    padding: 0 16px;
+  }
+
+  .menu-tags span {
+    display: flex;
     align-items: center;
+    justify-content: flex-start; 
+    gap: 8px;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 140px; 
+    box-sizing: border-box;
+  }
+
+  .menu-tags span img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+.menu-items {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 20px;
+    padding: 0 16px;
   }
 
   .menu-card {
-    width: 90%;
+    width: 100%;           
+    max-width: 360px;      
+    padding: 16px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .menu-card img {
+    margin: 0 auto;
+  }
+
+ 
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+  .footer-content img[src*="logo-footer.svg"] {
+    margin: 0 auto;      
+    display: block;     
+  }
+
+  .footer-content div {
+    width: 100%;
+  }
+
+  .footer-content p {
+    justify-content: center;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 0 auto;
   }
 }
-
