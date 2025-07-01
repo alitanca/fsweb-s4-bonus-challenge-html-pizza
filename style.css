@@ -114,11 +114,10 @@ img {
   border-radius: 20px;
   transition: background-color 0.3s;
 }
-
 .category-nav li:hover {
-  background: #f4f4f4;
+  background: black;
+  color: white;
 }
-
 
 .special-offers {
   display: flex;
